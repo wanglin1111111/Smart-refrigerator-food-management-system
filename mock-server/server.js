@@ -396,8 +396,9 @@ app.delete('/api/v1/fridge/members/:id', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Mock Server running on http://localhost:${PORT}`);
+  console.log(`              or http://192.168.0.177:${PORT} (LAN)`);
   console.log('Available APIs:');
   console.log('  POST   /api/v1/recipes/match     - 食材匹配菜谱');
   console.log('  POST   /api/v1/recipes/generate   - AI生成菜谱');
